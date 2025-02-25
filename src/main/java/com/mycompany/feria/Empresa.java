@@ -44,6 +44,10 @@ public class Empresa {
     
         
     public Stand getStand()    {return stand; }
+
+    public static ArrayList<Empresa> getDatosEmpresa() {
+        return datosEmpresa;
+    }
     
     
     
@@ -76,9 +80,40 @@ public class Empresa {
             return "Sin definir";   
         
 }
+    
 
     }
     
+    /// se crea este metodo para la prueba unitaria ya que el metodo normal, requiere ingreso de datos del usuario.
+    
+     public static String elegirSectorPruebaUnitaria(int opcionSectorPrueba) 
+    {
+    System.out.println("Escoja un sector: "); 
+    System.out.println("\n {1}. Sector tecnología  ");
+    System.out.println("\n {2}. Sector salud ");
+    System.out.println("\n {3}. Sector educación "); 
+    
+  
+    
+    switch (opcionSectorPrueba){
+
+        case 1:
+            return "Sector tecnología";
+            
+        case 2:
+            return "Sector salud";
+            
+        case 3:
+            return "Sector educación";
+            
+        default:
+            System.out.println("Ópción no válida");
+            return "Sin definir";   
+        
+}
+    
+
+    }
     
     public void setCorreo(String correo) { this.correo = correo; }
     public void setStand(Stand stand) { this.stand = stand; }
