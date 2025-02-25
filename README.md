@@ -10,8 +10,8 @@ Este proyecto es una aplicación de consola para gestionar una feria.
 Ruta para abrir el proyecto feria:
 
 src
-main/java/com/mycompany/feria
-test/java/com/mycompany/feria
+- main/java/com/mycompany/feria
+- test/java/com/mycompany/feria
 
 ## Instalación
 
