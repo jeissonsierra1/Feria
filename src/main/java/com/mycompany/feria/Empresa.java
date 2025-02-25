@@ -131,17 +131,15 @@ public class Empresa {
            // Método principal
 
     
-     public static void registrarEmpresa(Scanner scanner, List<Empresa> datosEmpresa) {
-        System.out.println("Escriba el nombre de la empresa");
-        String nombre = scanner.nextLine();
-        String sector = elegirSector();
-        System.out.println("Digite un correo: ");
-        String correo = scanner.nextLine();
+     public static void registrarEmpresa(String nombre, String sector, String correo, List<Empresa> datosEmpresa) {
+       
 
         Empresa nuevaEmpresa = new Empresa(nombre, sector, correo, null);
         datosEmpresa.add(nuevaEmpresa);
         System.out.println("Empresa registrada con éxito.");
     }
+     
+     
     
     
     // método para editar empresa
@@ -205,10 +203,8 @@ public class Empresa {
     
      // método para eliminar empresa
 
-    public static void eliminacion (List<Empresa> listaEmpresas){
+    public static void eliminacion(String nombreEliminar, List<Empresa> listaEmpresas){
         
-        System.out.println("Ingrese el nombre de la empresa que desea eliminar: ");
-         String nombreEliminar = scanner.nextLine();
     
         Empresa empresaEliminar = null;
     

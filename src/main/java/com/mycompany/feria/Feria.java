@@ -18,7 +18,7 @@ public class Feria {
     private static List<Empresa> datosEmpresa = new ArrayList<>();
     private static List<Stand> datosStand = new ArrayList<>();
     private static List<Visitante> listaVisitantes = new ArrayList<>();
-    
+    private static List<Empresa> listaEmpresas = new ArrayList<>(); 
     
     //Getters
 
@@ -26,6 +26,15 @@ public class Feria {
         return datosStand;
     }
 
+    public static List<Empresa> getListaEmpresas() {
+        return listaEmpresas;
+    }
+
+    public static List<Empresa> getDatosEmpresa() {
+        return datosEmpresa;
+    }
+
+    
     public static List<Visitante> getListaVisitantes() {
         return listaVisitantes;
     }
@@ -67,16 +76,24 @@ public class Feria {
            switch (option) {
         
             case 1:
-                   Empresa.registrarEmpresa(scanner, datosEmpresa);
-                          break;
+                   System.out.println("Escriba el nombre de la empresa:");
+                    String nombre = scanner.nextLine();                   
+                    String sector = Empresa.elegirSector();
+                    System.out.println("Digite un correo:");
+                    String correo = scanner.nextLine();
+
+                    Empresa.registrarEmpresa(nombre, sector, correo, datosEmpresa);
+                    break;
 
             case 2:
                 Empresa.editarEmpresa(datosEmpresa);
                 break;
                 
             case 3: 
-                Empresa.eliminacion(datosEmpresa);
-                break;
+                System.out.println("Ingrese el nombre de la empresa que desea eliminar: ");
+                    String nombreEliminar = scanner.nextLine(); 
+                    Empresa.eliminacion(nombreEliminar, Feria.getDatosEmpresa());   
+               break;
                 
             case 4:
                 
