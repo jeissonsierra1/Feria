@@ -72,7 +72,7 @@ Para ejecutar el proyecto:
 - Ejecute la clase principal Feria()
 
   # Para ejecutar los tests unitarios:
-  - Asegúrese de tener JUnit configurado en su entorno
+  - Asegúrese de tener JUnit 
   - Ejecute la clase EmpresaTest
 
 # Flujo de Trabajo
