@@ -84,7 +84,7 @@ public class Empresa {
 
     }
     
-    /// se crea este metodo para la prueba unitaria ya que el metodo normal, requiere ingreso de datos del usuario.
+    /// se crea este metodo para que en la prueba unitaria, podamos usar el metodo sin esperar datos de ingreso de usuario
     
      public static String elegirSectorPruebaUnitaria(int opcionSectorPrueba) 
     {
